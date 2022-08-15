@@ -1,7 +1,7 @@
 fn main() {
     let input = std::fs::read_to_string("input.txt").unwrap();
     let a = input
-        .split("\r\n")
+        .lines()
         .filter(|x| !x.is_empty())
         .map(|x| str::parse::<i32>(x).unwrap())
         .collect::<Vec<_>>();
